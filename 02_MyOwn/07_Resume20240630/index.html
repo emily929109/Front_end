@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RWD Profolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+   href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+   rel="stylesheet"
+  />
+  <script src="script.js" defer></script>
+ </head>
+ <body>
+  <!--==================== Header=================== -->
+  <header class="header" id="header">
+   <nav class="nav container">
+    <a href="#header" class="nav-logo">Emily</a>
+
+    <div class="nav-menu" id="nav-menu">
+     <ul class="nav-list">
+      <li>
+       <a href="#home" class="nav-link">Home</a>
+      </li>
+
+      <li>
+       <a href="#work" class="nav-link">Recent Works</a>
+      </li>
+
+      <li>
+       <a href="#info" class="nav-link">My Info</a>
+      </li>
+
+      <!-- <li>
+       <a href="#contact" class="nav-link">Contact Me</a>
+      </li> -->
+     </ul>
+
+     <!-- close button -->
+     <div class="nav-close" id="nav-close">
+      <i class="ri-close-large-line"></i>
+     </div>
+    </div>
+
+    <!-- toggle button -->
+    <div class="nav-toggle" id="nav-toggle">
+     <i class="ri-menu-line"></i>
+    </div>
+   </nav>
+  </header>
+
+  <!--==================== Main=================== -->
+  <!-- ========Home========-->
+  <main class="main">
+    <section class="home section" id="home">
+     <div class="home-container container grid">
+      <img src="profile-high.jpg" alt="image" class="home-img" />
+ 
+      <div class="home-data">
+       <h1 class="home-name">Emily <br />Lin</h1>
+       <h2 class="home-profession">Web Learner</h2>
+      </div>
+ 
+      <a href="#work" class="home-scroll">
+       <div class="home-scroll-box">
+        <i class="ri-arrow-down-line"></i>
+       </div>
+ 
+       <span class="home-scroll-text">Recent Works</span>
+      </a>
+     </div>
+    </section>
+ 
+<!-- ========Works========-->
+<section class="work section" id="work">
+  <h2 class="section-title">RECENT WORKS</h2>
+
+  <div class="work-container container grid">
+    <article class="work-card">
+      <a href="#" target="_blank" class="work-link">
+        <h2 class="work-title">PHP Calculator</h2>
+        <p class="work-description">
+          Use <span class="focus">HTML/CSS/PHP</span> to create a simple calculator.
+        </p>
+
+        <img src="calculator.png" alt="image" class="work-img">
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </article>
+
+    <article class="work-card">
+      <a href="#" target="_blank" class="work-link">
+        <h2 class="work-title">Food Recipe App</h2>
+        <p class="work-description">
+          <span class="focus">HTML/CSS/Javascript/RWD/Fetch API/AWS</span><br>
+          Use Fetch API to link TheMealDB with RWD design.
+        </p>
+
+        <img src="FoodRecipe.png" alt="image" class="work-img">
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </article>
+
+    <article class="work-card">
+      <a href="#" target="_blank" class="work-link">
+        <h2 class="work-title">Login Form</h2>
+        <p class="work-description">
+         A login form that floats over the top of a background image with error and success states.
+        </p>
+
+        <img src="login.png" alt="image" class="work-img">
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </article>
+
+    <article class="work-card">
+      <a href="#" target="_blank" class="work-link">
+        <h2 class="work-title">DatePicker & TodoList</h2>
+        <p class="work-description">
+          <span class="focus">HTML/CSS/Javascript/NPM/Node.js/AWS</span><br>
+          I use this app to help me calculate the date when i have works.<br>
+          - Work efficiency has increased 20 times<br>
+          - Improve the probability of audit flaws by 4.2% to 7.0%
+        </p>
+
+        <img src="DatePicker&TodoList.png" alt="image" class="work-img">
+        <i class="ri-arrow-right-line"></i>
+      </a>
+    </article>
+  </div>
+</section>
+
+<!-- ========Info========-->
+ <section class="info section" id="info">
+  <h2 class="section-title">MY INFO</h2>
+
+  <div class="info-container container grid">
+    <!-- ABOUT -->
+     <!-- <div class="about grid"> -->
+      <div>
+        <h3 class="info-title">About Me</h3>
+        <p class="about-description">
+         Passionate about creating <b>websites with beautiful interfaces</b>. I'm
+         learning in <b>Web Development</b> with several projects completed.
+        </p>
+      </div>
+     <!-- Experience -->
+     <div class="experience">
+      <h3 class="info-title">Experience</h3>
+      <div class="experience-content grid">
+
+       <div class="experience-data grid">
+        <h2 class="experience-company">台灣菸酒股份有限公司(TTL)</h2>
+
+        <div>
+         <h3 class="experience-profession">品管技師</h3>
+         <span class="experience-date">2023.03 - Present</span>
+         <p class="experience-description">
+          -     化驗酒類樣品
+         </p>
+        </div>
+       </div>
+       <!-- experience-data grid end -->
+
+       <div class="experience-data grid">
+        <h2 class="experience-company">義美食品公司(IMEI)</h2>
+
+        <div>
+         <h3 class="experience-profession">助理品管技師代領班級</h3>
+         <span class="experience-date">2019.04 - 2022.09</span>
+         <p class="experience-description">
+          -負責各項稽核<br />
+          -協助現場排除異常<br />
+          -改善冰棒產品塑膠異物客怨案件下降97%<br />
+          -冰棒產品刷毛異物改善 <br />
+         </p>
+        </div>
+       </div>      
+      </div>
+      <!-- experience-content grid END -->
+     </div>
+
+     <!-- Skills -->
+     <div class="skills">
+      <h3 class="info-title">Skills</h3>
+
+      <div class="skills-content grid">
+       <div class="skills-box">
+        <img src="html.png" alt="image" class="skills-img" />
+        <span class="skills-name">HTML</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="css.png" alt="image" class="skills-img" />
+        <span class="skills-name">CSS</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="js.png" alt="image" class="skills-img" />
+        <span class="skills-name">Javascript</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="php.png" alt="image" class="skills-img" />
+        <span class="skills-name">PHP</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="git.png" alt="image" class="skills-img" />
+        <span class="skills-name">GIT</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="github.png" alt="image" class="skills-img" />
+        <span class="skills-name">GitHub</span>
+       </div>
+
+       <div class="skills-box">
+        <img src="nodejs.png" alt="image" class="skills-img" />
+        <span class="skills-name">Node.js</span>
+       </div>
+
+       <div class="skills-box">
+        <img
+         src="visual-studio-code-icons/vscode.png"
+         alt="image"
+         class="skills-img"
+        />
+        <span class="skills-name">visual Studio Code</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+
+  </div>
+ </section>
+
+ </body>
+</html>

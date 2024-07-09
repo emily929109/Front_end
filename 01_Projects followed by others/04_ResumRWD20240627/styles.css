@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+/*================= Variables CSS================= */
+:root {
+ --header-height: 3.5rem;
+ --hue: 230;
+ --first-color: hsl(var(--hue), 55%, 55%);
+ --first-color-light: hsl(var(--hue), 55%, 65%);
+ --first-color-alt: hsl(var(--hue), 50%, 50%);
+ --title-color: hsl(var(--hue), 30%, 95%);
+ --text-color: hsl(var(--hue), 20%, 80%);
+ --text-color-light: hsl(var(--hue), 20%, 70%);
+ --body-color: hsl(var(--hue), 40%, 16%);
+ --container-color: hsl(var(--hue), 40%, 20%);
+
+ /*================= Font================= */
+ --body-font: "Syne", sans-serif;
+ --biggest-font-size: 3rem;
+ --big-font-size: 1.5rem;
+ --h1-font-size: 1.5rem;
+ --h2-font-size: 1.25rem;
+ --h3-font-size: 1rem;
+ --normal-font-size: 0.938rem;
+ --small-font-size: 0.813rem;
+
+ /*================= Font-weight================= */
+ --font-regular: 400;
+ --font-semi-bold: 600;
+ --font-bold: 700;
+
+ /*================= z-index================= */
+ --z-tooltip: 10;
+ --z-fixed: 100;
+}
+
+/*================= RWD type================= */
+@media screen and (min-width: 1150px) {
+ :root {
+  --biggest-font-size: 5.5rem;
+  --big-font-size: 2.75rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1.125rem;
+  --small-font-size: 0.875rem;
+ }
+}
+
+/*=================Base================= */
+* {
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+html {
+ scroll-behavior: smooth;
+}
+/* 點擊連結至某個section時滾輪平滑滾動，非直接跳轉 */
+
+body,
+input,
+textarea,
+button {
+ font-family: var(--body-font);
+ font-size: var(--normal-font-size);
+}
+
+body {
+ background-color: var(--body-color);
+ color: var(--text-color);
+}
+
+input,
+textarea,
+button {
+ border: none;
+ outline: none;
+}
+
+h1,
+h2,
+h3 {
+ color: var(--title-color);
+ font-weight: var(--font-semi-bold);
+}
+
+p {
+ line-height: 130%;
+}
+
+ul {
+ list-style: none;
+}
+
+a {
+ text-decoration: none;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+/*=================Reusable CSS classes================= */
+.container {
+ max-width: 1120px;
+ margin-inline: 1.5rem;
+}
+/* 筆電多為1400px左右，防止container拓展太大 */
+
+.grid {
+ display: grid;
+ gap: 1.5rem;
+}
+
+.section {
+ padding-block: 5rem 2rem;
+}
+
+.section-title {
+ text-align: center;
+ font-size: var(--h1-font-size);
+ font-weight: var(--font-bold);
+ margin-bottom: 2rem;
+}
+
+.main {
+ overflow: hidden;
+}
+
+/*=================Header&Navigation================= */
+header {
+ position: fixed;
+ width: 100%;
+ top: 0;
+ left: 0;
+ background-color: transparent;
+ z-index: var(--z-fixed);
+}
+
+.nav {
+ /* position: relative; */
+ height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.nav-logo {
+ color: var(--title-color);
+ font-weight: var(--font-bold);
+}
+
+.nav-toggle,
+.nav-close {
+ font-size: 1.5rem;
+ color: var(--title-color);
+ cursor: pointer;
+}
+
+/* navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+ .nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: hsla(var(--hue), 70%, 4%, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width: 80%;
+  height: 100%;
+  padding: 7rem 3rem;
+  transition: right 0.4s;
+ }
+
+ .nav-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+ }
+
+ .nav-link {
+  position: relative;
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  transition: color 0.4s;
+ }
+
+ .nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: var(--first-color-light);
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  transition: width 0.3s;
+ }
+
+ .nav-link:hover {
+  color: var(--first-color-light);
+ }
+
+ .nav-link:hover::after {
+  width: 30%;
+ }
+
+ .nav-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+ }
+}
+/* show menu */
+.show-menu {
+ right: 0;
+}
+/* add blur header */
+.blur-header::after {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-color: hsla(var(--hue), 70%, 4%, 0.2);
+ backdrop-filter: blur(16px);
+ -webkit-backdrop-filter: blur(16px);
+ top: 0;
+ left: 0;
+ z-index: -1;
+}
+/* active link */
+
+/*==========================Home========================== */
+.home-container {
+ row-gap: 2rem;
+ padding-top: 1rem;
+}
+
+.home-img {
+ /* width: 220px; */
+ justify-self: center;
+ /* 等同於margin: 0 auto; */
+ mask-image: linear-gradient(
+  to bottom,
+  var(--body-color) 60%,
+  transparent 100%
+ );
+}
+
+.home-name {
+ font-size: var(--biggest-font-size);
+ font-weight: var(--font-bold);
+ /* word-break: break-word; */
+ margin-bottom: 1rem;
+}
+
+.home-profession {
+ position: relative;
+ font-size: var(--big-font-size);
+ color: var(--text-color);
+}
+
+.home-profession::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ bottom: -0.5rem;
+ width: 25%;
+ height: 3px;
+ background-color: var(--text-color);
+}
+
+.home-scroll {
+ color: var(--title-color);
+ display: flex;
+ /* inline-flex? */
+ column-gap: 0.5rem;
+ justify-content: center;
+ align-items: center;
+ margin-top: 3rem;
+}
+
+.home-scroll-box {
+ background-color: var(--first-color);
+ width: 32px;
+ height: 32px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1.5rem;
+ /* overflow: hidden; */
+}
+
+.home-scroll-text {
+ font-weight: var(--font-semi-bold);
+}
+
+.home-scroll-box i {
+ animation: scroll-down 3s infinite;
+}
+/* animate scroll icon */
+@keyframes scroll-down {
+ 0% {
+  transform: translateY(-1rem);
+  opacity: 0;
+ }
+ 50% {
+  transform: translateY(0);
+  opacity: 1;
+ }
+ 100% {
+  transform: translateY(0.6rem);
+  opacity: 0;
+ }
+}
+
+/*=========================Button========================= */
+.button {
+ display: block;
+ text-align: center;
+ /* display: inline-flex;
+ justify-content: center; */
+ background-color: var(--first-color);
+ color: var(--text-color);
+ font-weight: var(--font-semi-bold);
+ padding: 1.25rem;
+ transition: background-color 0.4s;
+}
+
+.button:hover {
+ background-color: var(--first-color-alt);
+}
+/*=========================Works========================= */
+.work {
+ background-color: var(--container-color);
+}
+
+.work-card {
+ background-color: var(--first-color);
+}
+/* <a>包住標題、<p>及圖片 */
+.work-link {
+ display: block;
+ position: relative;
+ background-color: var(--body-color);
+ padding: 2rem 1.5rem 1.5rem 1.5rem;
+ color: var(--text-color);
+ transition: transform 0.4s;
+}
+
+.work-title {
+ font-size: var(--h3-font-size);
+ margin-bottom: 0.75rem;
+}
+
+.work-description {
+ margin-bottom: 1.5rem;
+}
+
+.work-link i {
+ position: absolute;
+ top: 1.8rem;
+ right: 1.5rem;
+ font-size: 1.5rem;
+ color: var(--first-color-light);
+ transition: transform 0.4s;
+}
+
+.work-link:hover {
+ transform: translateY(-0.35rem);
+}
+
+.work-link:hover i {
+ transform: translateX(0.5rem);
+}
+
+/*=========================INFO========================= */
+.info-container {
+ row-gap: 3rem;
+}
+
+.info-title {
+ position: relative;
+ font-size: var(--small-font-size);
+ color: var(--text-color);
+ margin-bottom: 2rem;
+}
+
+.info-title::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ bottom: -0.5rem;
+ width: 20px;
+ height: 2px;
+ background-color: var(--text-color);
+}
+/* ABOUT */
+.about-description {
+ margin-bottom: 2rem;
+}
+
+.about-description b {
+ color: var(--first-color-light);
+}
+
+.about-button {
+ width: 100%;
+}
+
+/* EXPERIENCE */
+.experience-content {
+ row-gap: 2rem;
+}
+
+.experience-data {
+ row-gap: 1rem;
+}
+
+.experience-company {
+ font-size: var(--h2-font-size);
+ font-weight: var(--font-bold);
+}
+
+.experience-profession {
+ font-size: var(--h3-font-size);
+ margin-bottom: 0.25rem;
+}
+
+.experience-date {
+ display: block;
+ font-size: var(--small-font-size);
+ margin-bottom: 0.75rem;
+}
+
+/* SKILLS */
+.skills-img {
+ width: 35px;
+ margin-bottom: 0.5rem;
+}
+
+.skills-name {
+ font-size: var(--small-font-size);
+}
+
+.skills-content {
+ grid-template-columns: repeat(3, max-content);
+ justify-content: space-around;
+ /* align-items: flex-end; */
+}
+
+.skills-box {
+ display: grid;
+ place-items: center;
+ transition: transform 0.4s;
+}
+
+.skills-box:hover {
+ transform: translateY(-0.25rem);
+}
+
+/*=======================SERVICES====================== */
+/*=======================CONTACT===================== */
+/*=======================FOOTER======================== */
+/*===================SCROLL BAR==================== */
+/*==================SCROLL UP========================== */

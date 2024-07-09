@@ -1,0 +1,97 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+ /* margin: 0; */
+ font-family: "Open Sans", sans-serif;
+}
+
+.card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 1rem;
+ align-items: start;
+}
+
+.card {
+ --padding: 1rem;
+ background-color: white;
+ /* padding: 1rem; */
+ border: 1px solid #777;
+ border-radius: 0.25rem;
+ /* max-width: 300px; */
+}
+
+.card.card-shadow {
+ border: none;
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+ overflow: hidden;
+}
+
+.card-header {
+ font-size: 1.5rem;
+ margin-bottom: 0.5rem;
+ padding: var(--padding);
+ padding-bottom: 0;
+}
+
+.card-header.card-image {
+ overflow: hidden;
+ padding: 0;
+}
+
+.card-header.card-image > img {
+ display: block;
+ width: 100%;
+ aspect-ratio: 16/9; /*設定圖片元素容器寬高*/
+ object-fit: cover; /*保持圖片原比例*/
+ max-height: 200px; /*當螢幕變寬時圖片持續變大，因此設上限*/
+ object-position: center;
+ transition: 200ms transform ease-in-out;
+}
+
+.card:hover > .card-header.card-image > img {
+ transform: scale(1.025);
+}
+
+.card-body {
+ font-size: 0.9rem;
+ padding: 0 var(--padding);
+}
+
+.card-footer {
+ margin-top: 1rem;
+ padding: var(--padding);
+ padding-top: 0;
+}
+
+.btn {
+ --color: hsl(200, 50%, 50%);
+ background-color: var(--color);
+ color: white;
+ border: none;
+ padding: 0.5em 0.75em;
+ border-radius: 0.25em;
+ cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+ background-color: hsl(200, 50%, 60%);
+}
+
+.btn.btn-outline {
+ background: none;
+ border: 1px solid var(--color);
+ color: var(--color);
+}
+
+.btn.btn-outline:hover,
+.btn.btn-outline:focus {
+ background-color: hsl(200, 50%, 90%);
+}
+
+.btn + .btn {
+ margin-left: 0.25rem;
+}

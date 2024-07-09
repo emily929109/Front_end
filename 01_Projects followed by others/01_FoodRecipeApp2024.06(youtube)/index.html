@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Recipe App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+   rel="stylesheet"
+  />
+  <script
+   src="https://kit.fontawesome.com/7c6bbc6b90.js"
+   crossorigin="anonymous"
+  ></script>
+  <link
+   href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+ <body>
+  <div class="container">
+   <div class="meal-wrapper">
+    <div class="meal-search">
+     <h2 class="title">Feel hungry?</h2>
+     <cite>You are what you eat.</cite>
+     <div class="meal-search-box">
+      <input
+       type="text"
+       class="search-content"
+       placeholder="Enter an ingredient"
+       id="search-input"
+      />
+      <button type="submit" class="search-btn btn" id="search-btn">
+       <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+     </div>
+    </div>
+
+    <div class="meal-result">
+     <h2 class="title">Your Rearch Results:</h2>
+     <div id="meal"></div>
+     <!-- end of meal -->
+    </div>
+    <!-- end of meal-result -->
+   </div>
+   <!-- end of meal-wrapper -->
+
+   <div class="meal-details">
+    <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+     <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="meal-details-content">
+     <h2 class="recipe-title">Meals name here</h2>
+     <p class="recipe-category">Category name</p>
+     <div class="recipe-instruct">
+      <h3>Instructions:</h3>
+      <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero voluptatum
+       aliquid porro dignissimos reiciendis vitae libero eveniet eius maxime
+       aliquam quasi ipsa quis eos, debitis ipsam neque doloremque quisquam odit
+       voluptas deleniti. Ipsam in odit optio dolorum nisi similique rerum
+       excepturi modi tempora perferendis error reprehenderit qui, quidem sint
+       aperiam eius aliquam sunt eaque repellendus. Debitis ducimus, modi velit,
+       rerum officiis dolores voluptate repudiandae quas itaque, saepe
+       recusandae distinctio officia ratione aliquid. Iure iste quos optio est
+       pariatur nobis fuga excepturi qui architecto! Ut ipsam aspernatur
+       repellat fuga laboriosam voluptates illo a, nobis enim quasi perferendis
+       iusto in deserunt nam.
+      </p>
+     </div>
+     <div class="recipe-img">
+      <img src="./img/food.jpg" />
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!--template-->
+  <template>
+   <div class="meal-item">
+    <div class="meal-img">
+     <img src="" />
+    </div>
+    <div class="meal-name">
+     <h3></h3>
+     <a href="#" class="recipe-btn">Get Recipe </a>
+    </div>
+   </div>
+  </template>
+  <!--template-->
+ </body>
+</html>

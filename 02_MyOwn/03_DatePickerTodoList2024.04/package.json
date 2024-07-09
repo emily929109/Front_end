@@ -1,0 +1,13 @@
+{
+  "description": "",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "date-fns": "^3.6.0"
+  }
+}

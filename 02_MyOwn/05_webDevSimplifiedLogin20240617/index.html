@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+   href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+   rel="stylesheet"
+  />
+ </head>
+ <body>
+  <nav class="nav-top">
+   <div class="nav-left">
+    <img src="wds_logo.png" class="nav-logo" />
+    <ul class="nav-list">
+     <li><a href="#">Blog</a></li>
+     <li><a href="https://www.youtube.com/">Youtube</a></li>
+    </ul>
+   </div>
+   <div class="nav-right">
+    <button class="login-btn">Login</button>
+   </div>
+  </nav>
+  <!-- end of nav -->
+  <div class="container">
+   <h3>Log in to Web Dev Simplified</h3>
+   <div class="login-item">
+    <label for="email">Email</label>
+    <input id="email" name="email" />
+    <span class="msg">Invalid email</span>
+   </div>
+
+   <div class="login-item error">
+    <label for="password">Password</label>
+    <input id="password" name="password" />
+    <span class="msg">Invalid password</span>
+   </div>
+
+   <button class="btn">Login</button>
+   <div class="forgot-msg">Forgot your password? Reset it.</div>
+  </div>
+ </body>
+</html>

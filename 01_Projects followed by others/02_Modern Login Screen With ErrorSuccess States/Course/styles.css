@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+/* dark用於背景和陰影;primary用於focus時;light用於輸入框背景 */
+:root {
+ --primary-light-hsl: 200, 100%, 91%;
+ --primary-hsl: 200, 100%, 50%;
+ --primary-dark-hsl: 200, 100%, 6%;
+ --success-hsl: 100, 60%, 50%;
+ --error-hsl: 0, 60%, 50%;
+}
+
+body {
+ margin: 0;
+}
+
+.full-screen-container {
+ background-image: url("./background-image.jpg");
+ height: 100vh;
+ width: 100vw;
+ background-size: cover;
+ background-position: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.login-container {
+ --color: hsl(var(--primary-dark-hsl), 0.7);
+ background-color: var(--color);
+ box-shadow: 0 0 15px 0 var(--color);
+ padding: 40px 30px;
+ width: 80%;
+ max-width: 600px;
+ border-radius: 20px;
+}
+
+.login-title {
+ margin: 0;
+ color: white;
+ text-align: center;
+ font-size: 2rem;
+ font-weight: normal;
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+ margin-top: 40px;
+}
+
+.input-group {
+ display: flex;
+ flex-direction: column;
+ gap: 7px;
+}
+
+.input-group label {
+ color: white;
+}
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+ -webkit-box-shadow: 0 0 0 50px rgba(0, 155, 232, 0.3) inset !important;
+} */
+
+/* 設定瀏覽器自動充填時的樣式，即自動抓取使用者先前輸入過的訊息(通常是email、password等輸入框)*/
+.input-group input:-webkit-autofill {
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: #ffffff;
+ box-shadow: inset 0 0 100px 100px hsla(var(--primary-light-hsl), 0.3);
+}
+
+/* 設定瀏覽器自動充填時並有success class的樣式*/
+.input-group.success input:-webkit-autofill {
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: #ffffff;
+ box-shadow: inset 0 0 100px 100px hsla(var(--primary-light-hsl), 0.3),
+  0 0 0 1px hsl(var(--success-hsl));
+}
+
+/* 設定瀏覽器自動充填時並有error class的樣式*/
+.input-group.error input:-webkit-autofill {
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: #ffffff;
+ box-shadow: inset 0 0 100px 100px hsla(var(--primary-light-hsl), 0.3),
+  0 0 0 1px hsl(var(--error-hsl));
+}
+
+/* 設定輸入後的樣式 */
+.input-group input {
+ font-size: 1.25rem;
+ padding: 1em;
+ background-color: hsl(var(--primary-light-hsl), 0.3);
+ border-radius: 0.25em;
+ color: #ffffff;
+ border: none;
+ outline: none;
+ font-weight: lighter;
+}
+
+/* 透過js添加success class給input */
+/* .input-group.success input {
+ box-shadow: 0 0 0 1px hsl(var(--success-hsl));
+} */
+
+.input-group.success input:focus,
+.input-group.error input:focus {
+ box-shadow: inset 0 0 100px 100px hsl(var(--primary-light-hsl), 0.3),
+  0 0 0 1px hsl(var(--primary-hsl));
+}
+
+.input-group .message {
+ display: none;
+ font-size: 0.75rem;
+}
+
+.input-group.success .message,
+.input-group.error .message {
+ display: block;
+}
+
+.input-group.success .message {
+ color: hsl(var(--success-hsl));
+}
+
+.input-group.error .message {
+ color: hsl(var(--error-hsl));
+}
+
+.login-button {
+ padding: 0.5em 1em;
+ font-size: 1.5em;
+ color: white;
+ background-color: hsla(var(--primary-hsl), 0.25);
+ border: 1px solid hsl(var(--primary-hsl));
+ border-radius: 0.25em;
+ outline: none;
+ cursor: pointer;
+}
+
+.login-button:focus,
+.login-button:hover {
+ background-color: hsla(var(--primary-hsl), 0.4);
+}

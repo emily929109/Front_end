@@ -1,0 +1,124 @@
+*{
+	margin:0;
+	padding:0;
+	/*否則div.top bg上方會填不滿*/
+	list-style:none;/*清單無點點*/
+	font-family:Arial;
+}
+
+body{
+	background-color:#F5F5F5;
+	height:100vh;
+	width:100%;
+}
+
+div.top{
+	width:100%;
+	height:50px;
+	/*border:1px solid;
+	text-align:right; 不能設定右邊邊距要多少*/
+	font-size:0px;
+	background-color:#F9BF86;
+	position:relative;/*供nav定位用*/
+}
+
+div.icon{
+	/*float:right;不能設定右邊邊距要多少*/
+	position:absolute;
+	right:40px;
+	/*border:1px solid;*/
+	padding-top:8px;
+	
+}
+
+i{
+	text-align:center;
+	display:inline-block;
+	font-size:20px;
+	padding:5px;
+	/*border:1px solid;
+	margin:0;*/
+}
+
+a{
+	text-decoration:none;
+	color:#5B5B5B;
+}
+
+div.second{
+	border-bottom:1px solid #8E8E8E;
+	min-height:8em;
+}
+
+img.logo{
+	width:17%;
+	margin-left:2.8em;
+	float:left;
+}
+
+nav{
+	position:absolute;
+	right:15em;
+	top:3.7em;
+	font-size:1.2em;
+}
+
+ul{					
+	/*border:1px solid;*/
+	text-align:center;
+	display:inline-block;
+}
+
+li{
+	display:inline-block;
+	margin:1.5em;
+	font-weight:bold;
+	color:#5B5B5B;
+}
+
+li:hover{
+	color:#F9BF86;
+}
+
+a:hover{
+	color:#F9BF86;
+}
+
+div.third{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+div.imgcontainer{
+	width:50%;
+	/*border:1px solid;*/
+	margin:1.5em auto 0.5em auto;
+	/*border-color:white;沒這東西*/
+	border:3px solid white;
+	border-radius:3%;
+	box-shadow:2px 2px 3px #5B5B5B;
+}
+
+img.cake{
+	width:100%;
+	text-align:center;
+	border-radius:3%;
+}
+
+div.footer{
+	display:flex;
+	/*width:max-content;*/
+	justify-content:space-between;
+	/*border:1px solid red;*/
+	padding:1em;
+	margin-top:1.5em;
+	background-color:#F9BF86;
+}
+
+p{
+	color:#5B5B5B;
+	font-size:0.8em;
+	/*border:1px solid;*/
+}
+

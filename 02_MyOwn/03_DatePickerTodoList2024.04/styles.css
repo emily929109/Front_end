@@ -1,0 +1,147 @@
+ul{
+    list-style: none;
+    padding:0;
+    margin:0
+}
+
+.total-container{
+    display: flex;
+    justify-content: center;
+}
+
+.container-userMessage, .schedule, .detail-schedule{
+    margin:20px;
+    width:300px;
+}
+
+.schedule{
+    width:500px;
+}
+
+/* 月曆們 */
+.date-picker-small {
+    display: none;
+    padding: .3rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: white; 
+}
+
+.date-picker-large {
+    display: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05), 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    background-color: white; 
+}
+
+.date-picker-header-small {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.date-picker-header-large {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.date-picker-grid-small {
+    display: grid;
+    gap: .5rem;
+    grid-template-columns: repeat(7, 2rem);
+    grid-auto-rows: 1.8rem;
+} 
+
+.date-picker-grid-large {
+    display: grid;
+    gap: .7rem;
+    grid-template-columns: repeat(7, 3.5rem);
+    grid-auto-rows: 3.5rem;
+}      
+  
+.date-picker-grid-small > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: .8rem;
+}
+
+.date-picker-grid-large > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+  
+.date-picker-grid-dates > .date-small {
+    cursor: pointer;
+    border-radius: .25rem;
+    border: none;
+    background: none;/*button預設為灰色*/
+}
+
+.date-picker-grid-dates > .date-large {
+    position: relative;
+    cursor: pointer;
+    border-radius: .25rem;
+    border: 1px solid black;
+    background: none;/*button預設為灰色*/
+}
+
+/* 大月曆與小月曆共用的部分 */
+.month-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+.month-button:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-radius: .5rem;
+}
+
+.date-picker-other-month-date {
+    color: #AAA;
+ }
+
+ 
+.date-picker-grid-dates {
+    color: #555;
+}
+
+.date-picker-grid-dates> *:hover {
+    background-color: hsl(200, 100%, 80%);
+    color: black;
+}
+
+/* user輸入 */
+.container-userMessage label{
+    display:inline-block;
+    width:100px;
+    text-align: right;
+}
+
+
+.sampleList{
+    list-style: none;
+    position:absolute;
+    top:35px;
+    color:#AAA
+}
+
+li.displayNone{
+    display:none
+}
+
+div.innerFlexbox{
+    display:flex;
+    flex-direction: column;
+}
